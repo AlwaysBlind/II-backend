@@ -65,8 +65,8 @@ MIDDLEWARE = [
 
 # CORS_ALLOW_ALL_ORIGINS = True
 CORS_ORIGIN_WHITELIST = [
+    'alwaysblind.github.io/II-frontend/'
     'http://localhost:3000',
-    'https://alwaysblind.github.io/II-frontend/'
 ]
 
 ROOT_URLCONF = 'djangosrc.urls'
