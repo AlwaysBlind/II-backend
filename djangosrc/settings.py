@@ -29,8 +29,8 @@ SECRET_KEY = os.environ.get(
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ["https://boiling-dusk-81292.herokuapp.com/",
-                 '127.0.0.1'
+ALLOWED_HOSTS = ["boiling-dusk-81292.herokuapp.com",
+                 '127.0.0.18000'
                  ]
 
 
@@ -66,6 +66,7 @@ MIDDLEWARE = [
 # CORS_ALLOW_ALL_ORIGINS = True
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
+    'https://alwaysblind.github.io/II-frontend/'
 ]
 
 ROOT_URLCONF = 'djangosrc.urls'
