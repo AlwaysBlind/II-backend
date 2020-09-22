@@ -23,9 +23,9 @@ class IndexedVideo(models.Model):
         return f'{self.title}: {self.videofile}'
 
     def IndexVideo(self, videopath):
+        process = psutil.Process(os.getpid())
         ii = ImageIndexer(frames_per_image=50)
-        ii.classify_video(videopath)
-        for word, image, frame_number in list(ii.get_generator()):
+        for word, image, frame_number in ii.classify_video(videopath):
             imfilename = f'{self.videofile.name.split(r"/")[-1]}'\
                 f'_image_{word}_{frame_number}'
             ci = ClassifiedImage(title=imfilename,
